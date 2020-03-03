@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import walkSprite from './walkSprite.png'
+import walkingSprite from './walkingSprite.png'
 
 
 
@@ -11,7 +11,7 @@ return (
         position: 'relative',
         top: props.position[1],
         left: props.position[0],
-        backgroundImage: `url('${walkSprite}')`,
+        backgroundImage: `url('${walkingSprite}')`,
         backgroundPostion: '0 0',
         width: '65px',
         height: '70px'
