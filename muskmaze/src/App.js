@@ -1,13 +1,14 @@
-import React from 'react';
-import Player from './features/player'
+import React, { Component } from 'react';
+import World from './features/world'
 
-function App() {
+
+class App extends Component {
+  render(){
   return (
     <div>
-      <Player />
+     <World />
     </div>
   )
-  
+  }
 }
-
-export default App;
+export default App
