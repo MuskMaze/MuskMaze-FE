@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import walkingSprite from './walkingSprite.png'
-
+import handleMovement from './movement'
 
 
 function Player(props) {
@@ -28,5 +28,5 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Player) //higher order
+export default connect(mapStateToProps)(handleMovement(Player)) //higher order
 

@@ -6,6 +6,13 @@ const initialState = {
 
 const playerReducer = (state=initialState, action) => {
   switch(action.type) {
+
+    case 'MOVE_PLAYER': //whenever store is dispatched moves player
+      return {
+        ...action.payload //new object at new position
+        
+      }
+
       default:
       return state //whatever is in store gets returned
   }  
