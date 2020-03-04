@@ -18,3 +18,23 @@
 }
 
 
+.main-box{
+  width: 32%;
+  height: 32%;
+  margin: 0 auto;
+  background-color: lightgray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input-box{
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+
+.header-text{
+  padding-top: 22px;
+}

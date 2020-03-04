@@ -3,9 +3,11 @@ import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { useHistory } from "react-router-dom";
 
 const Login = (props) => {
-    const [user, setUser] = useState({ username: '', password: ''})
+    const [user, setUser] = useState({ username: '', password: ''});
+    const history = useHistory();
 
     const changeHandler = event => {
         setUser({...user, [event.target.name]: event.target.value})
@@ -17,22 +19,24 @@ const Login = (props) => {
          axios
             .post("/api/login/", user)
             .then(result => {
-            console.log(result)
-            localStorage.setItem("token", result.data.token);    
-            setUser({ username: '', password: ''})
+            
+            localStorage.setItem("token", result.data.key);
+            setUser({ username: '', password: ''});
+            history.push("/");
         })
         .catch(error => {
           console.log(error)
-          alert("Username and/or Passwrod not recognized, please try again", error)
+          alert(error)
       })
     
     }
 
   return (
-     <div>
-          <Typography component="h1" variant="h5">
+     <div className="main-box"> 
+          <Typography component="h1" variant="h5" className="header-text">
            User Login
           </Typography>
+          <div className="input-box">
           <form onSubmit={handleSubmit} noValidate>
             <TextField
               variant="outlined"
@@ -68,7 +72,9 @@ const Login = (props) => {
             >
               Login
             </Button>
+         
           </form>
+          </div>
         </div>
    
   );

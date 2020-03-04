@@ -3,12 +3,14 @@ import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import { useHistory } from "react-router-dom";
 
 
 
 const Register = (props) => {
-        const [user, setUser] = useState({ "email": '', username: '',  "password1": '', "password2": ''})
+    
+    const [user, setUser] = useState({ "email": '', username: '',  "password1": '', "password2": ''})
+    const history = useHistory();
     
     const changeHandler = event => {
     
@@ -21,16 +23,19 @@ const Register = (props) => {
         event.preventDefault();
     
         axios
-            .post("api/registration/", user)
+            .post("/api/registration/", user)
             .then( result => {
-              console.log("user", user)
-              console.log("result", result)
+              localStorage.setItem("token", result.data.key);
               setUser({email: '', username: '', password1: '', password2: ''})
-    
+              history.push("/");
             })
             .catch(error => {
-              console.log(error)
-              alert("Username already exists please login to continue", error)
+                let errorMessage = "" + 
+                (error.response.data.email || " ") +
+                (error.response.data.username || " ") + 
+                (error.response.data.password1 || " ") + 
+                (error.response.data.password2 || " ");
+                alert(errorMessage);
             })
              }
 
@@ -38,11 +43,12 @@ const Register = (props) => {
   
 
   return (
-        <div>
-          <Typography component="h1" variant="h5">
+        <div className="main-box">   
+          <Typography component="h1" variant="h5" className="header-text">
             Sign Up
           </Typography>
           <form onSubmit={handleSubmit} noValidate>
+        <div className="input-box">
           <TextField
               variant="outlined"
               margin="normal"
@@ -100,7 +106,9 @@ const Register = (props) => {
             >
               Register
             </Button>
+            </div>
           </form>
+        
         </div>
     
   );
