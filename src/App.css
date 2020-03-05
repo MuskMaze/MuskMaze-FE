@@ -15,6 +15,12 @@
   font-family: 'Monoton', cursive;
 }
 
+.nav{
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+
+
 
 .main-box{
   width: 32%;
@@ -35,6 +41,7 @@
 
 .header-text{
   padding-top: 22px;
+  color: "red" !important;
 }
 
 .main-btn{
@@ -51,8 +58,3 @@
   width: 40%;
 }
 
-.home-icon{
-  margin-bottom: 150px;
-  color: red;
-  width: 300px;
-}

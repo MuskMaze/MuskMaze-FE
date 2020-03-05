@@ -4,13 +4,13 @@ import Tabs from '@material-ui/core/Tabs';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 
 const useStyles = makeStyles(theme => ({
     nav: {
-        backgroundColor: "#1d1c1d",
-
+        // backgroundColor: "#1d1c1d",
     },
     label: {
         style:'none',
@@ -32,17 +32,14 @@ const Nav = () => {
 
 
       return (
-        <AppBar position="static" className={classes.nav} title="My App">
+        <AppBar position="static" className="nav" title="My App">
           <Tabs>
           <Grid
-            justify='flex-end' // Add it here :)
+            justify='flex-start' 
             container 
             spacing={18}>
-                <Link href="/register" className={classes.label} label="register">
-                Sign up
-                </Link>
-                <Link href="/login" className={classes.label} label="Play Puzzle">
-                Login
+                <Link href="/" label="home">
+                      <HomeIcon style={{ fontSize: 32, color: 'goldenrod', marginLeft: '52', marginTop: '7' }} />
                 </Link>
             </Grid>
           </Tabs>

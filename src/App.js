@@ -5,18 +5,19 @@ import Register from './components/Register';
 import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Game from "./components/Game";
-// import Navs from "./components/Navs";
+import Navs from "./components/Navs";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import HomeIcon from '@material-ui/icons/Home';
+
 
 
 
 function App() {
   return (
     <div className="App">
+      <Navs />
       <div className="App-header">
-        {/* <Navs/> */}
-      {/* <HomeIcon style={{ fontSize: 52, color: 'dimgrey' }} /> */}
+       
+
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route path="/game" component={Game} />
