@@ -4,7 +4,6 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background-image: url("./images/bg.jpg");
   min-height: 100vh;
   display: flex;
@@ -14,10 +13,6 @@
   font-size: calc(10px + 2vmin);
   color: goldenrod;
   font-family: 'Monoton', cursive;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 
@@ -54,4 +49,10 @@
 
 .btn{
   width: 40%;
+}
+
+.home-icon{
+  margin-bottom: 150px;
+  color: red;
+  width: 300px;
 }
