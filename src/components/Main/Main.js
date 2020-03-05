@@ -26,7 +26,7 @@ const Main = () => {
 
   return (
     <div className='theBigOne'>
-      {/* should house the overlay and animations from jason whatever we end up calling that.*/}
+      {/* should house the overlay and animations whatever we end up calling that.*/}
       <div className='backgroundThing'>
         <Viewport />
         {/* rests under the background/room element */}

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
-import styles from './viewport.css'
+import styles from '../Viewport/Viewport.css'
 import InputManager from '../InputManager/InputManager'
 import de from '../../assets/floorandwalls/1doorE.png'
 import dn from '../../assets/floorandwalls/1doorN.png'

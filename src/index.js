@@ -5,6 +5,8 @@ import App from './App';
 import {  BrowserRouter as Router } from "react-router-dom";
 import { createStore } from 'redux'
 import roomReducer from './components/reducers/roomReducer'
+import { Provider } from 'react-redux'
+
 
 const store = createStore(
   roomReducer,
@@ -12,7 +14,8 @@ const store = createStore(
 )
 
 
-ReactDOM.render(<Router><App /></Router>, document.getElementById('root'));
+ReactDOM.render(<Router><Provider store={store}><App /></Provider></Router>, document.getElementById('root'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
