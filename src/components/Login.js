@@ -17,17 +17,15 @@ const Login = (props) => {
          console.log(user);
          
          axios
-            .post("/api/login/", user)
+            .post("http://muskmaze.herokuapp.com:80/api/login/", user)
             .then(result => {
-            
-            localStorage.setItem("token", result.data.key);
-            setUser({ username: '', password: ''});
-            history.push("/");
-        })
-        .catch(error => {
-          console.log(error)
-          alert(error)
-      })
+                localStorage.setItem("token", result.data.key);
+                setUser({ username: '', password: ''});
+                history.push("/game");
+            }).catch(error => {
+                console.log(error)
+            alert(error)
+            });
     
     }
 

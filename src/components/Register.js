@@ -23,11 +23,11 @@ const Register = (props) => {
         event.preventDefault();
     
         axios
-            .post("/api/registration/", user)
+            .post("http://muskmaze.herokuapp.com:80/api/registration/", user)
             .then( result => {
               localStorage.setItem("token", result.data.key);
               setUser({email: '', username: '', password1: '', password2: ''})
-              history.push("/");
+              history.push("/game");
             })
             .catch(error => {
                 let errorMessage = "" + 
