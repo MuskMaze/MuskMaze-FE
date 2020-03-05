@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import { useDispatch } from 'react-redux'
+import Main from './components/Main/Main'
+import PrivateRoute from './components/utils/PrivateRoute'
+import Viewport from './components/Viewport/Viewport'
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Register from './components/Register';
 import Login from "./components/Login";
@@ -11,7 +15,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-function App() {
+function App(props) {
+  console.log('props in app', props)
+  const dispatch = useDispatch()
   return (
     <div className="App">
       <div className="App-header">
