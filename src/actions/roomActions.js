@@ -4,10 +4,3 @@ export const move = (data) => {
         payload: data
     }
 }
-
-export const login = username => {
-    return {
-        type: "LOGIN",
-        payload: username
-    }
-}

@@ -1,5 +1,5 @@
 import React from 'react'
-import axiosWithAuth from '../utils/axiosWithAuth.js'
+
 import Textbox from './Textbox'
 import './Sidebar.css'
 const Sidebar = (props) => {
