@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import axiosWithAuth from '../utils/axiosWithAuth'
+import axios from 'axios'
 import Coordinate from './Coordinate'
 import './MapModal.css'
 const MapModal = props => {
@@ -10,7 +10,7 @@ const MapModal = props => {
     const [map, setMap] = useState([])
 
     useEffect(_ => {
-        axiosWithAuth().get('https://muskmaze.herokuapp.com/api/adv/rooms/')
+        axios().get('https://muskmaze.herokuapp.com/api/adv/rooms/')
             .then(res => {
                 const sorted = res.data.sort((first, second) => second.title.split(' ')[3] - first.title.split(' ')[3]),
                     tens = []

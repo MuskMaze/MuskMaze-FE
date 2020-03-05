@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { move } from '../../actions/roomActions'
-import axiosWithAuth from '../utils/axiosWithAuth'
+// import axiosWithAuth from '../utils/axiosWithAuth'
 import Sidebar from '../Sidebar/Sidebar'
 import Movement from '../Movement/Movement'
 import MapModal from '../MapModal/MapModal'
@@ -17,7 +18,7 @@ const Main = () => {
   }
 
   useEffect(_ => {
-    axiosWithAuth()
+    axios()
       .get('https://muskmaze.herokuapp.com/api/adv/init/')
       .then(res => dispatch(move(res.data)))
       .catch(err => console.error(err))

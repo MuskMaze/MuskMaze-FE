@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux'
-import axiosWithAuth from '../utils/axiosWithAuth'
-
-import styles from './viewport.module.css'
+import axios from 'axios'
+import styles from './viewport.css'
 import InputManager from '../InputManager/InputManager'
-
 import de from '../../assets/floorandwalls/1doorE.png'
 import dn from '../../assets/floorandwalls/1doorN.png'
 import ds from '../../assets/floorandwalls/1doorS.png'
@@ -63,7 +61,7 @@ const Viewport = props => {
   const dwidth = 897
 
   useEffect(() => {
-    axiosWithAuth()
+    axios()
       .get('https://unknown-mud.herokuapp.com/api/adv/rooms/')
       .then(res => {
         const roomsData = res.data.map(
