@@ -20,6 +20,12 @@ const roomReducer = (state = {
                 players: action.payload.players,
                 error_msg: action.payload.error_msg,
             };
+
+        case "MAPS":
+           return {
+               ...state,
+               Maps: action.payload
+           }
         default:
             return state
     }

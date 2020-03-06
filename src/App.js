@@ -7,7 +7,6 @@ import { Switch, BrowserRouter as Router, Route } from "react-router-dom"
 import Register from './components/Register'
 import Login from "./components/Login"
 import Landing from "./components/Landing"
-import Game from "./components/Game"
 import { Provider } from 'react-redux'
 import roomReducer from './components/reducers/roomReducer'
 // import Navs from "./components/Navs"

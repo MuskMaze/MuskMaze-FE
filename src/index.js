@@ -6,6 +6,15 @@ import {  BrowserRouter as Router } from "react-router-dom";
 import { createStore } from 'redux'
 import roomReducer from './components/reducers/roomReducer'
 import { Provider } from 'react-redux'
+ import axios from 'axios';
+
+
+ axios.get('https://muskmaze.herokuapp.com/api/adv/maps/')
+ .then(res => dispatch(_ => ({
+     type: "MAPS",
+     payload: res.data
+ })
+
 
 
 const store = createStore(
@@ -13,7 +22,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-// const data = useSelector(state => state.whatever)
+
 
 ReactDOM.render(<Router><Provider store={store}><App /></Provider></Router>, document.getElementById('root'));
 
