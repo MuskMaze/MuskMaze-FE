@@ -13,6 +13,7 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
+// const data = useSelector(state => state.whatever)
 
 ReactDOM.render(<Router><Provider store={store}><App /></Provider></Router>, document.getElementById('root'));
 
