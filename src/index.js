@@ -9,13 +9,7 @@ import { Provider } from 'react-redux'
  import axios from 'axios';
 
 
- axios.get('https://muskmaze.herokuapp.com/api/adv/maps/')
- .then(res => dispatch(_ => ({
-     type: "MAPS",
-     payload: res.data
- })
-
-
+ 
 
 const store = createStore(
   roomReducer,
