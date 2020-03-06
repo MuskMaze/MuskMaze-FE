@@ -7,7 +7,7 @@ import Link from '@material-ui/core/Link';
 const Landing = (props) => {
   return (
     <div>
-    <h1>MuskMaze</h1>
+    <h1 className="h1">MuskMaze</h1>
     <h3>Multi User Dungeon Game </h3>
     <div className="main-btn">
     <ButtonToolbar>

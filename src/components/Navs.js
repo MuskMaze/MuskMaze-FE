@@ -9,9 +9,7 @@ import HomeIcon from '@material-ui/icons/Home';
 
 
 const useStyles = makeStyles(theme => ({
-    nav: {
-        // backgroundColor: "#1d1c1d",
-    },
+  
     label: {
         style:'none',
         margin: theme.spacing(3),
