@@ -23,13 +23,16 @@ import easternSprites from '../../assets/sprites/easternSprites.png'
 import northernSprites from '../../assets/sprites/northernSprites.png'
 import southernSprites from '../../assets/sprites/southernSprites.png'
 import westernSprites from '../../assets/sprites/westernSprites.png'
+import {getMapData} from '../../actions/roomActions'
+// import { connect } from 'net';
+import {connect} from 'react-redux'
 
 const Viewport = props => {
   // Map information for drawing doors in current room
   const [rooms, setRooms] = useState([])
   // Player character starting position
   const [playerChar, setPlayerChar] = useState({ x: 295, y: 150 })
-
+ console.log('viewport props' ,props)
   // Get current room info
   const curRm = useSelector(state => state.title)
 
@@ -61,8 +64,9 @@ const Viewport = props => {
   const dwidth = 897
 
   useEffect(() => {
-    axios()
-      .get('https://unknown-mud.herokuapp.com/api/adv/rooms/')
+    props.getMapData();
+    axios
+      .get('https://muskmaze.herokuapp.com/api/adv/maps/')
       .then(res => {
         const roomsData = res.data.map(
           ({ room_id, north, east, south, west, title }) => ({
@@ -258,4 +262,23 @@ const Viewport = props => {
   )
 }
 
-export default Viewport
+const mapStateToProps = state => {
+  return {
+    mapData: state.mapData
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getData: ()=> dispatch({
+      type: 'FETCH_START',
+    }),
+    getMapData
+  }
+}
+
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Viewport)
+// export default Viewport

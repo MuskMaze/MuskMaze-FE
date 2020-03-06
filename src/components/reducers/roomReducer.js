@@ -1,6 +1,10 @@
+import FETCH_START from '../../actions/roomActions'
+
+
 const roomReducer = (state = {
     title: "",
     description: "",
+    mapData: [],
     players: [],
     error_msg: "",
     currentUser: localStorage.getItem('user') ? localStorage.getItem('user') : ''
@@ -20,6 +24,13 @@ const roomReducer = (state = {
                 players: action.payload.players,
                 error_msg: action.payload.error_msg,
             };
+
+        case "FETCH_START":
+           return {
+               ...state,
+               mapData: action.payload //state you want to change
+               
+           }
         default:
             return state
     }

@@ -6,14 +6,16 @@ import {  BrowserRouter as Router } from "react-router-dom";
 import { createStore } from 'redux'
 import roomReducer from './components/reducers/roomReducer'
 import { Provider } from 'react-redux'
+ import axios from 'axios';
 
+
+ 
 
 const store = createStore(
   roomReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-// const data = useSelector(state => state.whatever)
 
 ReactDOM.render(<Router><Provider store={store}><App /></Provider></Router>, document.getElementById('root'));
 

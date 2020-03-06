@@ -21,7 +21,7 @@ const Login = (props) => {
             .then(result => {
                 localStorage.setItem("token", result.data.key);
                 setUser({ username: '', password: ''});
-                history.push("/game");
+                history.push('/viewport');
             }).catch(error => {
                 console.log(error)
             alert(error)
