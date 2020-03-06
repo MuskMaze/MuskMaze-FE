@@ -20,6 +20,14 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.h1{
+  font-size: 8rem;
+}
+.nav{
+background-color: #130f40;
+background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+border-bottom: 1px solid midnightblue;
+}
 .input-box{
   width: 80%;
   height: 80%;
@@ -41,8 +49,4 @@
 .btn{
   width: 40%;
 }
-.home-icon{
-  margin-bottom: 150px;
-  color: red;
-  width: 300px;
-}
+

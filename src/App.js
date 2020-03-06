@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './App.css'
 import { useDispatch } from 'react-redux'
@@ -24,9 +25,10 @@ function App(props) {
   return (
 
     <div className="App">
+      <Navs />
       <div className="App-header">
-        {/* <Navs/> */}
-      {/* <HomeIcon style={{ fontSize: 52, color: 'dimgrey' }} /> */}
+       
+
       <Switch>
         <Route exact path="/" component={Landing} />
         {/* <Route path="/game" component={Game} /> */}
