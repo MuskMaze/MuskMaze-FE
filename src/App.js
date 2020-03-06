@@ -11,7 +11,7 @@ import Landing from "./components/Landing"
 import Game from "./components/Game"
 import { Provider } from 'react-redux'
 import roomReducer from './components/reducers/roomReducer'
-// import Navs from "./components/Navs"
+import Navs from "./components/Navs"
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import HomeIcon from '@material-ui/icons/Home';
 import { createStore } from 'redux'

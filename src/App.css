@@ -10,18 +10,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: goldenrod;
-  font-family: 'Monoton', cursive;
+  font-family: 'Monoton', 'Roboto', sans-serif;
 }
 .main-box{
   width: 32%;
   height: 32%;
   margin: 0 auto;
-  background-color: lightgray;
+  background-color: darkgray;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .h1{
-  font-size: 8rem;
+  font-size: 3.3rem !important;
 }
 .nav{
 background-color: #130f40;
@@ -37,6 +37,8 @@ border-bottom: 1px solid midnightblue;
 }
 .header-text{
   padding-top: 22px;
+  color: #000000 !important;
+  
 }
 .main-btn{
   margin:0 auto;
