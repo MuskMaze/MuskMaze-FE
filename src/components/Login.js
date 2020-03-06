@@ -26,7 +26,7 @@ const Login = (props) => {
                 console.log(error)
             alert(error)
             });
-    
+
     }
 
   return (
