@@ -14,7 +14,7 @@ import React, {useState} from 'react';
      const handleSubmit = event => {
          event.preventDefault();
          axios
-             .post("http://muskmaze.herokuapp.com:80/api/registration/", user)
+             .post("https://muskmaze.herokuapp.com/api/registration/", user)
              .then( result => {
                localStorage.setItem("token", result.data.key);
                setUser({email: '', username: '', password1: '', password2: ''})

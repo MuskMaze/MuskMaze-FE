@@ -17,7 +17,7 @@ const Login = (props) => {
          console.log(user);
          
          axios
-            .post("http://muskmaze.herokuapp.com:80/api/login/", user)
+            .post("https://muskmaze.herokuapp.com/api/login/", user)
             .then(result => {
                 localStorage.setItem("token", result.data.key);
                 setUser({ username: '', password: ''});
